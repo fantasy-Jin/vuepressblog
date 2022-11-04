@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git 代理问题 | JinBlog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="终端 git 无法拉取的问题">
+    
+    <link rel="preload" href="/assets/css/0.styles.cdc9b68d.css" as="style"><link rel="preload" href="/assets/js/app.4f446981.js" as="script"><link rel="preload" href="/assets/js/2.65446588.js" as="script"><link rel="preload" href="/assets/js/10.3eac8b84.js" as="script"><link rel="prefetch" href="/assets/js/11.d7674826.js"><link rel="prefetch" href="/assets/js/12.37b98b06.js"><link rel="prefetch" href="/assets/js/13.0cecffd1.js"><link rel="prefetch" href="/assets/js/14.9c0e144a.js"><link rel="prefetch" href="/assets/js/15.51e5c126.js"><link rel="prefetch" href="/assets/js/16.2ccea54d.js"><link rel="prefetch" href="/assets/js/17.ad5dd87a.js"><link rel="prefetch" href="/assets/js/18.be28e98f.js"><link rel="prefetch" href="/assets/js/19.9c952c2e.js"><link rel="prefetch" href="/assets/js/20.39d24d59.js"><link rel="prefetch" href="/assets/js/21.ebf6e3d0.js"><link rel="prefetch" href="/assets/js/22.f7140e2c.js"><link rel="prefetch" href="/assets/js/23.a5d06cc5.js"><link rel="prefetch" href="/assets/js/24.e701a819.js"><link rel="prefetch" href="/assets/js/25.08643ca6.js"><link rel="prefetch" href="/assets/js/26.9018f6ec.js"><link rel="prefetch" href="/assets/js/3.638467ba.js"><link rel="prefetch" href="/assets/js/4.b4bb0e7e.js"><link rel="prefetch" href="/assets/js/5.03215d72.js"><link rel="prefetch" href="/assets/js/6.c02cc4af.js"><link rel="prefetch" href="/assets/js/7.62fd985a.js"><link rel="prefetch" href="/assets/js/8.8af1d87e.js"><link rel="prefetch" href="/assets/js/9.48c6f617.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdc9b68d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/fantasy.jpg" alt="JinBlog" class="logo"> <span class="site-name can-hide">JinBlog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/resources/website/websites_recom.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/js/js_advanced.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/notes/ajax/ajax.html" class="nav-link">
+  Ajax
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/vue/vue核心基础.html" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/notes/nodejs/node.html" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/notes/webpack/webpack基础.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/notes/ide/vscode.html" class="nav-link">
+  vscode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://blog.luckjin.cool" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  换种风格
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/fantasy06" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Gitee
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/resources/website/websites_recom.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/js/js_advanced.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/notes/ajax/ajax.html" class="nav-link">
+  Ajax
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/vue/vue核心基础.html" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" aria-current="page" class="nav-link router-link-exact-active router-link-active">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/notes/nodejs/node.html" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/notes/webpack/webpack基础.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/notes/ide/vscode.html" class="nav-link">
+  vscode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://blog.luckjin.cool" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  换种风格
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/fantasy06" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Gitee
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <!----> </aside> <main class="page"> <div class="theme-default-content content__default"><h3 id="开-vpn-后-浏览器可以访问-github-但是终端-git-却无法拉取代码"><a href="#开-vpn-后-浏览器可以访问-github-但是终端-git-却无法拉取代码" class="header-anchor">#</a> 开 vpn 后 浏览器可以访问 github ，但是终端 git 却无法拉取代码</h3> <p>解决方法：
+window10 打开设置–网络–代理，查看目前的端口:</p> <img src="https://picgo-fantasy06.oss-cn-guangzhou.aliyuncs.com/img/image-20220816224548008.png" alt="image-20220816224548008" style="zoom:200%;"> <p>给 git 设置代理 ,如vpn端口号为7890，则git设置代理为：</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code> <span class="token function">git</span> config <span class="token parameter variable">--global</span> http.proxy <span class="token string">'127.0.0.1:7890'</span>
+
+ <span class="token function">git</span> config <span class="token parameter variable">--global</span> https.proxy <span class="token string">'127.0.0.1:7890'</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>查看代理信息</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--get</span> http.proxy
+ 
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--get</span> https.proxy
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>取消代理</p> <div class="language-sh line-numbers-mode"><pre class="language-sh"><code><span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--unset</span> http.proxy
+ 
+<span class="token function">git</span> config <span class="token parameter variable">--global</span> <span class="token parameter variable">--unset</span> https.proxy
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <!----> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4f446981.js" defer></script><script src="/assets/js/2.65446588.js" defer></script><script src="/assets/js/10.3eac8b84.js" defer></script>
+  </body>
+</html>

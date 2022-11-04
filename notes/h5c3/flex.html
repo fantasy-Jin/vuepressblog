@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>flex 布局 | JinBlog</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    <link rel="icon" href="/img/logo.png">
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/assets/css/0.styles.cdc9b68d.css" as="style"><link rel="preload" href="/assets/js/app.4f446981.js" as="script"><link rel="preload" href="/assets/js/2.65446588.js" as="script"><link rel="preload" href="/assets/js/11.d7674826.js" as="script"><link rel="prefetch" href="/assets/js/10.3eac8b84.js"><link rel="prefetch" href="/assets/js/12.37b98b06.js"><link rel="prefetch" href="/assets/js/13.0cecffd1.js"><link rel="prefetch" href="/assets/js/14.9c0e144a.js"><link rel="prefetch" href="/assets/js/15.51e5c126.js"><link rel="prefetch" href="/assets/js/16.2ccea54d.js"><link rel="prefetch" href="/assets/js/17.ad5dd87a.js"><link rel="prefetch" href="/assets/js/18.be28e98f.js"><link rel="prefetch" href="/assets/js/19.9c952c2e.js"><link rel="prefetch" href="/assets/js/20.39d24d59.js"><link rel="prefetch" href="/assets/js/21.ebf6e3d0.js"><link rel="prefetch" href="/assets/js/22.f7140e2c.js"><link rel="prefetch" href="/assets/js/23.a5d06cc5.js"><link rel="prefetch" href="/assets/js/24.e701a819.js"><link rel="prefetch" href="/assets/js/25.08643ca6.js"><link rel="prefetch" href="/assets/js/26.9018f6ec.js"><link rel="prefetch" href="/assets/js/3.638467ba.js"><link rel="prefetch" href="/assets/js/4.b4bb0e7e.js"><link rel="prefetch" href="/assets/js/5.03215d72.js"><link rel="prefetch" href="/assets/js/6.c02cc4af.js"><link rel="prefetch" href="/assets/js/7.62fd985a.js"><link rel="prefetch" href="/assets/js/8.8af1d87e.js"><link rel="prefetch" href="/assets/js/9.48c6f617.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.cdc9b68d.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/img/fantasy.jpg" alt="JinBlog" class="logo"> <span class="site-name can-hide">JinBlog</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/resources/website/websites_recom.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/js/js_advanced.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/notes/ajax/ajax.html" class="nav-link">
+  Ajax
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/vue/vue核心基础.html" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/notes/nodejs/node.html" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/notes/webpack/webpack基础.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/notes/ide/vscode.html" class="nav-link">
+  vscode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://blog.luckjin.cool" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  换种风格
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/fantasy06" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Gitee
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><nav class="nav-links"><div class="nav-item"><a href="/resources/website/websites_recom.html" class="nav-link">
+  Resources
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><button type="button" aria-label="前端学习" class="dropdown-title"><span class="title">前端学习</span> <span class="arrow down"></span></button> <button type="button" aria-label="前端学习" class="mobile-dropdown-title"><span class="title">前端学习</span> <span class="arrow right"></span></button> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><h4>
+          基础
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/h5c3/css.html" class="nav-link">
+  HTML&amp;CSS
+</a></li><li class="dropdown-subitem"><a href="/notes/js/js_advanced.html" class="nav-link">
+  Javascript
+</a></li><li class="dropdown-subitem"><a href="/notes/ajax/ajax.html" class="nav-link">
+  Ajax
+</a></li></ul></li><li class="dropdown-item"><h4>
+          框架
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/vue/vue核心基础.html" class="nav-link">
+  Vue
+</a></li></ul></li><li class="dropdown-item"><h4>
+          其它
+        </h4> <ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/notes/git/git.html" class="nav-link">
+  Git
+</a></li><li class="dropdown-subitem"><a href="/notes/nodejs/node.html" class="nav-link">
+  Nodejs
+</a></li><li class="dropdown-subitem"><a href="/notes/webpack/webpack基础.html" class="nav-link">
+  webpack
+</a></li><li class="dropdown-subitem"><a href="/notes/ide/vscode.html" class="nav-link">
+  vscode
+</a></li></ul></li></ul></div></div><div class="nav-item"><a href="https://blog.luckjin.cool" target="_blank" rel="noopener noreferrer" class="nav-link external">
+  换种风格
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></div> <a href="https://gitee.com/fantasy06" target="_blank" rel="noopener noreferrer" class="repo-link">
+    Gitee
+    <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></nav>  <ul class="sidebar-links"><li><a href="/notes/h5c3/css.html" class="sidebar-link">CSS 基础</a></li><li><a href="/notes/h5c3/flex.html" aria-current="page" class="active sidebar-link">flex 布局</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex-布局原理" class="sidebar-link">flex 布局原理</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex-布局父盒子常见属性" class="sidebar-link">flex 布局父盒子常见属性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex-direction" class="sidebar-link">flex-direction</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#justify-content" class="sidebar-link">justify-content</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex-wrap" class="sidebar-link">flex-wrap</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#align-items" class="sidebar-link">align-items</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#align-content" class="sidebar-link">align-content</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex-flow" class="sidebar-link">flex-flow</a></li></ul></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex-布局子盒子常见属性" class="sidebar-link">flex 布局子盒子常见属性</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#flex" class="sidebar-link">flex</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#align-self" class="sidebar-link">align-self</a></li><li class="sidebar-sub-header"><a href="/notes/h5c3/flex.html#order" class="sidebar-link">order</a></li></ul></li></ul></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="flex-布局"><a href="#flex-布局" class="header-anchor">#</a> flex 布局</h1> <h2 id="flex-布局原理"><a href="#flex-布局原理" class="header-anchor">#</a> flex 布局原理</h2> <p>全称 flexible box，弹性布局。</p> <p>如何开启：为元素添加 <code>display: flex</code>。</p> <p>开启 flex 布局的元素，称为 flex 容器（flex container），其子元素成为容器成员，称为 flex 项目。</p> <p>flex 布局原理：通过给父盒子添加 <code>display: flex</code>，来控制盒子的位置和排列方式。</p> <h2 id="flex-布局父盒子常见属性"><a href="#flex-布局父盒子常见属性" class="header-anchor">#</a> flex 布局父盒子常见属性</h2> <h3 id="flex-direction"><a href="#flex-direction" class="header-anchor">#</a> <code>flex-direction</code></h3> <p>设置主轴方向</p> <table><thead><tr><th>属性值</th> <th>含义</th></tr></thead> <tbody><tr><td>row</td> <td>默认值，从左到右</td></tr> <tr><td>row-reverse</td> <td>从右到左</td></tr> <tr><td>column</td> <td>从上到下</td></tr> <tr><td>column-reverse</td> <td>从下到上</td></tr></tbody></table> <h3 id="justify-content"><a href="#justify-content" class="header-anchor">#</a> <code>justify-content</code></h3> <p>设置主轴子元素排列方式</p> <table><thead><tr><th>属性值</th> <th>含义</th></tr></thead> <tbody><tr><td>flex-start</td> <td>默认值，从头开始</td></tr> <tr><td>flex-end</td> <td>从尾部开始</td></tr> <tr><td>center</td> <td>居中</td></tr> <tr><td>space-around</td> <td>平分剩余空间</td></tr> <tr><td>space-between</td> <td>两侧子元素贴边，再平分剩余空间</td></tr></tbody></table> <h3 id="flex-wrap"><a href="#flex-wrap" class="header-anchor">#</a> <code>flex-wrap</code></h3> <p>设置子元素是否换行</p> <p>默认不换行，若子盒子宽度和大于父盒子，则会收缩！</p> <table><thead><tr><th>属性值</th> <th>含义</th></tr></thead> <tbody><tr><td>wrap</td> <td>换行</td></tr> <tr><td>nowrap</td> <td>默认值，不换行</td></tr></tbody></table> <h3 id="align-items"><a href="#align-items" class="header-anchor">#</a> <code>align-items</code></h3> <p>设置子元素在侧轴上的排列方式（子元素单行）</p> <table><thead><tr><th>属性值</th> <th>含义</th></tr></thead> <tbody><tr><td>flex-start</td> <td>侧轴头部开始</td></tr> <tr><td>flex-end</td> <td>侧轴尾部开始</td></tr> <tr><td>center</td> <td>侧轴居中</td></tr> <tr><td>stretch</td> <td>默认值，拉伸（拉满整个侧轴），若子元素设置了高度则失效</td></tr></tbody></table> <h3 id="align-content"><a href="#align-content" class="header-anchor">#</a> <code>align-content</code></h3> <p>设置子元素在侧轴上的排列方式（子元素多行）</p> <table><thead><tr><th>属性值</th> <th>含义</th></tr></thead> <tbody><tr><td>flex-start</td> <td>默认值，侧轴头部开始</td></tr> <tr><td>flex-end</td> <td>侧轴尾部开始</td></tr> <tr><td>center</td> <td>侧轴居中</td></tr> <tr><td>stretch</td> <td>子元素高度平分父元素高度（需要子元素没有设置高度）</td></tr> <tr><td>space-around</td> <td>平分侧轴空间</td></tr> <tr><td>space-between</td> <td>侧轴两侧贴边再平分剩余空间</td></tr></tbody></table> <h3 id="flex-flow"><a href="#flex-flow" class="header-anchor">#</a> <code>flex-flow</code></h3> <p><code>flex-direction</code> 与 <code>flex-wrap</code> 属性的复合写法</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">son</span> <span class="token punctuation">{</span>
+  <span class="token property">flex-flow</span><span class="token punctuation">:</span> row wrap<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><h2 id="flex-布局子盒子常见属性"><a href="#flex-布局子盒子常见属性" class="header-anchor">#</a> flex 布局子盒子常见属性</h2> <h3 id="flex"><a href="#flex" class="header-anchor">#</a> <code>flex</code></h3> <p><code>flex</code> 属性其实是 <code>flex-grow</code>、<code>flex-shrink</code>、<code>flex-basis</code> 三个属性的简写。</p> <p><code>flex-grow</code> 属性值为一个数字，用于设置弹性盒子的扩展比例，即盒子占剩余空间的份数，默认为 0。常见的 <code>flex: 1</code> 是 <code>flex-grow</code> 为 1。</p> <p><code>flex-shrink</code> 属性值为一个数字，用于设置盒子的收缩比例，当子盒子的宽度之和大于父盒子时才会收缩。</p> <p><code>flex-basis</code> 用于设置子盒子的初始长度。</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">span</span> <span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 1<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token selector">.son</span> <span class="token punctuation">{</span>
+  <span class="token property">flex</span><span class="token punctuation">:</span> 0 0 33.33%<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br></div></div><h3 id="align-self"><a href="#align-self" class="header-anchor">#</a> <code>align-self</code></h3> <p>单独设置某个子盒子在侧轴的排列方式，它会覆盖 <code>align-items</code> 属性。默认值为 <code>auto</code>，表示继承父盒子的 <code>align-items</code> 属性，其余属性值与 <code>align-items</code> 相同。</p> <h3 id="order"><a href="#order" class="header-anchor">#</a> <code>order</code></h3> <p>定义子盒子在<strong>主轴</strong>上的排列顺序。默认值为 0，值越小越靠前，可以为负数。</p> <div class="language-css line-numbers-mode"><pre class="language-css"><code><span class="token selector">.son</span> <span class="token punctuation">{</span>
+  <span class="token property">order</span><span class="token punctuation">:</span> -3<span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div></div> <footer class="page-edit"><!----> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/notes/h5c3/css.html" class="prev">
+        CSS 基础
+      </a></span> <!----></p></div> </main></div><div class="global-ui"></div></div>
+    <script src="/assets/js/app.4f446981.js" defer></script><script src="/assets/js/2.65446588.js" defer></script><script src="/assets/js/11.d7674826.js" defer></script>
+  </body>
+</html>
