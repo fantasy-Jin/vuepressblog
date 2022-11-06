@@ -1,4 +1,4 @@
-import{_ as n,o as s,c as a,b as t}from"./app.ca59e623.js";const e={},o=t(`<h2 id="path-autocomplete" tabindex="-1"><a class="header-anchor" href="#path-autocomplete" aria-hidden="true">#</a> path Autocomplete</h2><p><code>@</code> 路径导入</p><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code><span class="token comment">// 配置 @ 的路径提示</span>
+import{_ as n,o as s,c as a,a as t}from"./app.c25df637.js";const e={},o=t(`<h2 id="path-autocomplete" tabindex="-1"><a class="header-anchor" href="#path-autocomplete" aria-hidden="true">#</a> path Autocomplete</h2><p><code>@</code> 路径导入</p><div class="language-json line-numbers-mode" data-ext="json"><pre class="language-json"><code><span class="token comment">// 配置 @ 的路径提示</span>
 <span class="token property">&quot;path-autocomplete.pathMappings&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
   <span class="token property">&quot;@&quot;</span><span class="token operator">:</span> <span class="token string">&quot;\${folder}/src&quot;</span>
 <span class="token punctuation">}</span><span class="token punctuation">,</span>
